@@ -8,9 +8,12 @@
 const km = parseInt(prompt("Quanti chilometri vuoi percorrere?"));
 const age = parseInt(prompt("Inserisci la tua etá"));
 let prezzo = km * 0.21;
-let textSconto;
+// testo che viene aggiunto nel caso in cui viene applicato uno sconto
+let textSconto = "";
+
 if (age < 18) {
     const sconto = 20;
+    // calcolo lo sconto tovando direttamente 80% del prezzo e arrotondo i decimali
     prezzo = ((prezzo * (100 - sconto))/ 100).toFixed(2);
     textSconto= "scontato del "+sconto+"% ";
 } else if (age >= 65) {
